@@ -130,6 +130,9 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+let bothNames = zooAnimals.forEach(function(i){
+    displayNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
+});
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -138,7 +141,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
+let lowCaseAnimalNames = zooAnimals.map((zooAnimal, index, zooAnimals) => {
+  return zooAnimal.animal_name.toLowerCase();
+});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -146,17 +151,19 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-console.log(lowPopulationAnimals);
-
+let lowPopulationAnimals = zooAnimals.filter((larger) => {
+  return larger.population < 5;
+});  
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+let populationTotal = zooAnimals.reduce((population, zooAnimal, index, zooAnimals) => {
+  return population += zooAnimal.population;
+},0);
 
+console.log(populationTotal);
 
 /*
 
