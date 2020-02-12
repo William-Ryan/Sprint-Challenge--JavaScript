@@ -27,16 +27,32 @@ In meeting the minimum viable product (MVP) specifications listed below, you sho
 Demonstrate your understanding of this week's concepts by answering the following free-form questions.
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
-
++
 1. Describe the biggest difference between `.forEach` & `.map`.
+
+A: The biggest difference between '.forEach' and '.map' is that '.forEach' mutates the original array while '.map' creates a new array of the same size.
 
 2. What is the difference between a function and a method?
 
+A. The difference between function and method is that function is an object and method is a property of an object.
+
 3. What is closure?
+
+A: Closure is an inner function that has access to the outer variables within the outer function and the global functions.
 
 4. Describe the four rules of the 'this' keyword.
 
+A: Default Binding: is when "this" refers directly to a standalone function.
+
+   Implicit Binding: is when "this" is referencing the object before the dot for a function.
+
+   Explicit Binding: Using "call","apply", and "binding" we explicitly say to a function what object it should use for "this".
+
+   New Binding: is using "this" to create the variable and the properties/method to finally reference the newly created object using "this".
+
 5. Why do we need super() in an extended class?
+
+A: We need super() in an extended class so that we can call the methods of the parent class from which we are extending.
 
 ## Project Set up
 
